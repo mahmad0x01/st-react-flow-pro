@@ -1,0 +1,3 @@
+recursive-include src/st_react_flow_pro/frontend *
+include README.md
+include LICENSE
