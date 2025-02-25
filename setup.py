@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="st-react-flow-pro",
-    version="0.1.0",
+    version="0.1.3",
     author="Muhammad Ahmad",
     author_email="muhammad.ahmad@redbuffer.net",
     description="Streamlit component that allows you to do X",
@@ -19,4 +19,10 @@ setuptools.setup(
     classifiers=[],
     python_requires=">=3.7",
     install_requires=["streamlit>=1.2", "jinja2"],
+    package_data={
+        "st_react_flow_pro": ["frontend/dist/**/*"],
+    },
+    exclude_package_data={
+        "": ["node_modules", "*.log", "*.lock", "package.json", "package-lock.json", "tsconfig.json"]
+    },
 )
